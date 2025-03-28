@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Książka Przepisów Kulinarnych</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Książka Przepisów Kulinarnych</h1>
+    <a href="/add">Dodaj nowy przepis</a>
+    <ul>
+        {% for recipe in recipes %}
+        <li>
+            <h2>{{ recipe['title'] }}</h2>
+            <p>Składniki: {{ recipe['ingredients'] }}</p>
+            <p>Instrukcje: {{ recipe['instructions'] }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
