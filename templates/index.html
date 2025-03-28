@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Książka Przepisów Kulinarnych</h1>
-    <a href="/add">Dodaj nowy przepis</a>
+    <a href="/add_recipe">Dodaj nowy przepis</a>
     <ul>
         {% for recipe in recipes %}
         <li>
@@ -18,5 +18,7 @@
         </li>
         {% endfor %}
     </ul>
+    <a href="/edit_recipe">Edytuj przepis</a>
+    <a href="/recipe_details">Wyswietl przepisy</a>
 </body>
 </html>

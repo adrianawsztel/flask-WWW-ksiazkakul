@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+
+<h2>Dodaj nowy przepis</h2>
+<form method="POST">
+    <label>Nazwa potrawy:</label>
+    <input type="text" name="name" required>
+    <label>Składniki:</label>
+    <textarea name="ingredients" required></textarea>
+    <label>Czas przygotowania:</label>
+    <input type="text" name="preparation_time" required>
+    <label>Instrukcje wykonania:</label>
+    <textarea name="instructions" required></textarea>
+    <button type="submit">Dodaj przepis</button>
+</form>
+{% endblock %}
