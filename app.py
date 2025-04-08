@@ -6,9 +6,7 @@ recipes = []
 
 @app.route('/')
 def index():
-    search_query = request.args.get('search', '')
-    filtered_recipes = [recipe for recipe in recipes if search_query.lower() in recipe['name'].lower()]
-    return render_template('index.html', recipes=filtered_recipes)
+    return render_template('index.html')
 
 
 @app.route('/add_recipe', methods=['GET', 'POST'])
